@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Media One in the Chamber Sales Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        @keyframes bounceArrow {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(10px);
+            }
+            60% {
+                transform: translateY(5px);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes wiggle {
+            0%, 5%, 10%, 15%, 20%, 25% {
+                transform: rotate(0deg);
+            }
+            2.5%, 7.5%, 12.5%, 17.5%, 22.5% {
+                transform: rotate(-2deg);
+            }
+            5%, 10%, 15%, 20% {
+                transform: rotate(2deg);
+            }
+            25%, 100% {
+                transform: rotate(0deg);
+            }
+        }
+        .animate-wiggle {
+            animation: wiggle 4s ease-in-out infinite;
+        }
+        .animate-bounce-arrow {
+            animation: bounceArrow 2s infinite;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+        <!-- Hero Section -->
+        <div class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- Hero Content - Split Layout -->
+                <div class="grid lg:grid-cols-2 gap-6 items-center mb-16">
+                    <!-- Left Column - Text Content -->
+                    <div class="text-center">
+                        <div class="mb-8">
+                            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white mb-6">
+                                <i data-lucide="sparkles" class="w-5 h-5 mr-2"></i>
+                                Introducing Chamber Media's Latest Innovation
+                            </div>
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                One in the
+                                <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Chamber</span>
+                            </h1>
+                            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                                The completely AI-powered growth solution that handles your ad buying, performance content creation, and campaign reporting—all while you focus on running your business.
+                            </p>
+                           
+                           <div class="mb-8">
+                               <div class="flex justify-center">
+                                   <button
+                                   onclick="scrollToPricing()"
+                                   class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center animate-wiggle cursor-pointer"
+                                   >
+                                       Get Started
+                                       <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                                   </button>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Video -->
+                    <div class="flex justify-center lg:justify-start lg:ml-48">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="w-80 h-[500px] rounded-xl overflow-hidden shadow-2xl border-2 border-purple-400/30">
+                                <iframe 
+                                    width="100%" 
+                                    height="100%" 
+                                    src="https://www.youtube.com/embed/ge5c3kNLrPY?si=TIHskendq_ocSHw-&autoplay=1&mute=1&loop=1&playlist=ge5c3kNLrPY&controls=0&showinfo=0&rel=0&iv_load_policy=3" 
+                                    title="AI Content Examples" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen
+                                    class="rounded-xl"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Feature Cards - Under Hero -->
+                <div class="text-center mb-8">
+                    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                            <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="target" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Smart Ad Buying</h3>
+                            <p class="text-gray-300 text-sm">AI-optimized campaigns across all major platforms</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                            <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">AI Content Creation</h3>
+                            <p class="text-gray-300 text-sm">Professional product content generated automatically</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Monthly Reporting</h3>
+                            <p class="text-gray-300 text-sm">Detailed insights and performance analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pointing Arrow -->
+            <div class="flex justify-center pb-8 -mt-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center animate-bounce">
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <p class="text-white/70 text-sm mt-2">Scroll to see how AI ads work</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reason to Believe Section -->
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="pt-16">
+                <div class="max-w-4xl mx-auto mb-12">
+                    <div class="bg-white rounded-2xl p-12">
+                        <div class="text-center mb-8">
+                            <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                                Can Our AI Actually Grow Your Business?
+                            </h2>
+                            <p class="text-2xl text-gray-800 font-semibold">Yes, and here's why...</p>
+                        </div>
+                        
+                        <!-- Animated Arrow -->
+                        <div class="flex justify-center mb-8">
+                            <div class="flex flex-col items-center">
+                                <div class="w-8 h-8 border-2 border-purple-500 rounded-full flex items-center justify-center animate-bounce-arrow">
+                                    <i data-lucide="chevron-down" class="w-5 h-5 text-purple-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-8 mb-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-white font-bold text-2xl">40%</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Better Performance</h3>
+                                <p class="text-gray-600 text-sm">Our AI ads have reduced cost per click, cost per lead, and improved ROAS by as much as 40%</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-white font-bold text-lg">1000+</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Proven Data</h3>
+                                <p class="text-gray-600 text-sm">Our AI creator module is trained on 1,000s of the best performing ad content in the world</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-white font-bold text-lg">24/7</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Always Optimizing</h3>
+                                <p class="text-gray-600 text-sm">AI never sleeps - continuous optimization and performance monitoring around the clock</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">The Chamber Media Advantage</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                            <span class="text-purple-600 font-bold text-sm">✓</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-purple-600 mb-2">Decades of Experience</h4>
+                                            <p class="text-gray-600 text-sm">We've been growing brands for decades, now supercharged with AI technology</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                            <span class="text-purple-600 font-bold text-sm">✓</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-purple-600 mb-2">Performance-First Approach</h4>
+                                            <p class="text-gray-600 text-sm">Every piece of content is reverse-engineered from high-performing campaigns</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                            <span class="text-purple-600 font-bold text-sm">✓</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-purple-600 mb-2">Brand Safety Guaranteed</h4>
+                                            <p class="text-gray-600 text-sm">Professional, on-brand content that maintains your reputation while driving results</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                            <span class="text-purple-600 font-bold text-sm">✓</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-purple-600 mb-2">Full Control</h4>
+                                            <p class="text-gray-600 text-sm">You approve everything - content, audiences, budgets. We never launch without your approval</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Showcase Section -->
+        <div class="-mt-8">
+            <section class="py-8 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-6 items-center">
+                        <!-- Left Column - Content -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full flex flex-col justify-center">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                                What Will My Content Look Like?
+                            </h2>
+                            <p class="text-xl text-purple-100 mb-8">
+                                Professional, performance-driven content that's completely brand safe
+                            </p>
+
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Bespoke Assets</h3>
+                                        <p class="text-purple-100">
+                                            Every piece of content is custom-created for your specific brand, products, and audience
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="target" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Reverse Engineered</h3>
+                                        <p class="text-purple-100">
+                                            Built from the DNA of top-performing campaigns to maximize your conversion rates
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Brand Safe</h3>
+                                        <p class="text-purple-100">
+                                            Professional quality that maintains your brand integrity while driving performance
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column - Video -->
+                        <div class="flex justify-center">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 h-full flex items-center justify-center">
+                                <div class="w-80 h-[500px] rounded-xl overflow-hidden shadow-2xl border-2 border-purple-400/30">
+                                    <iframe 
+                                        width="100%" 
+                                        height="100%" 
+                                        src="https://www.youtube.com/embed/ge5c3kNLrPY?si=TIHskendq_ocSHw-&autoplay=1&mute=1&loop=1&playlist=ge5c3kNLrPY&controls=0&showinfo=0&rel=0&iv_load_policy=3" 
+                                        title="AI Content Examples" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen
+                                        class="rounded-xl"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="px-4 sm:px-6 lg:px-8 py-2">
+            <div class="max-w-6xl mx-auto mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        How It Works
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Your journey to AI-powered growth in 8 simple steps
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="file-text" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                1
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Fill Out Intake Form</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Complete our comprehensive questionnaire about your business and goals</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.1s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="share-2" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                2
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Share Meta Account Access</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Grant us secure access to your Meta advertising accounts</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.2s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="message-square" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                3
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">AI Chat Creative Brief</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Use our AI chat to generate a detailed creative brief for your campaigns</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.3s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                4
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Receive AI Content</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Get custom AI-generated performance content in 3-5 business days</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.4s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="play" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                5
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Approve & Launch</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Review and approve your content and audiences, then launch your ad campaigns</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.5s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                6
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Monitor Dashboard</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Track performance with our daily-updating analytics dashboard</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.6s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="pause" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                7
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Control Your Spend</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Pause campaigns anytime or increase spending as desired</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up" style="animation-delay: 0.7s">
+                        <div class="relative mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="rotate-ccw" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white text-purple-600 rounded-full flex items-center justify-center text-xs font-bold">
+                                8
+                            </div>
+                        </div>
+                        <h3 class="text-base font-semibold text-white mb-2">Rinse, Repeat, Grow</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Continuously optimize and scale your successful campaigns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <section id="pricing-section" class="py-2 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Choose Your Growth Plan
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Two powerful options designed to scale your business
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 md:gap-8 max-w-4xl mx-auto">
+                    <!-- Essential Plan -->
+                    <div class="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Essential</h3>
+                            <div class="mb-4">
+                                <span class="text-4xl font-bold text-gray-800">$2,500</span>
+                                <span class="text-gray-600">/month</span>
+                            </div>
+                            <p class="text-gray-600">Perfect for getting started with AI-powered ads</p>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Monthly ad management & optimization</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">5 custom AI-generated static image ads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Daily performance reporting & insights</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Email & Slack support within 48-hours</span>
+                            </div>
+                        </div>
+                        
+                        <!-- GOHIGHLEVEL INTEGRATION POINT: Replace this button with your GoHighLevel form button -->
+                        <button
+                            onclick="selectPlan('essential')"
+                            class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                        >
+                            Choose Essential Plan
+                        </button>
+                    </div>
+                    
+                    <!-- Premium Plan -->
+                    <div class="bg-white rounded-2xl p-8 relative border-2 border-purple-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-purple-600">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                                Most Popular
+                            </span>
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Premium</h3>
+                            <div class="mb-4">
+                                <span class="text-4xl font-bold text-gray-800">$3,500</span>
+                                <span class="text-gray-600">/month</span>
+                            </div>
+                            <p class="text-gray-600">Complete AI video funnel for maximum impact</p>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Everything in Essential plan</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Quarterly AI video funnel (3 custom videos)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">1 top-of-funnel prospecting video</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">2 performance retargeting videos</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Priority email & Slack support within 1 business day</span>
+                            </div>
+                        </div>
+                        
+                        <!-- GOHIGHLEVEL INTEGRATION POINT: Replace this button with your GoHighLevel form button -->
+                        <button
+                            onclick="selectPlan('premium')"
+                            class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                        >
+                            Choose Premium Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Everything you need to know about One in the Chamber
+                    </p>
+                </div>
+                
+                <div class="space-y-4" id="faq-container">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(0)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">How will communication work?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="0"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="0">
+                            <p class="text-gray-300 leading-relaxed">All communication and customer service happens via email and Slack for streamlined, efficient support. No phone calls are available with One in the Chamber. Need more hands-on support? Consider working directly with Chamber Media for a more personalized experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(1)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">Can AI content really drive growth?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="1"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="1">
+                            <p class="text-gray-300 leading-relaxed">Yes! Our AI is trained on thousands of high-performing campaigns and has consistently delivered 40% better performance metrics including reduced cost per click, lower cost per lead, and improved ROAS for our clients.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(2)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">What will my AI content look like?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="2"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="2">
+                            <p class="text-gray-300 leading-relaxed">Your content will be professional, brand-safe, and custom-created for your specific products and audience. Every piece is reverse-engineered from top-performing campaigns to maximize conversion rates while maintaining your brand integrity.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(3)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">What are the risks?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="3"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="3">
+                            <p class="text-gray-300 leading-relaxed">As with any marketing, there are always risks involved, but we minimized them with decades of experience growing brands. Most importantly, you still have total control. Our AI creates brand-safe content and campaign optimizations, but you approve all budgets, campaigns, targeting, and creative. You can pause or adjust spending at any time.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(4)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">Is ad spend included?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="4"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="4">
+                            <p class="text-gray-300 leading-relaxed">No, ad spend is separate from our service fees. You maintain full control over your advertising budget and can adjust spending based on performance and your business goals.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(5)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">What does ad management include?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="5"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="5">
+                            <p class="text-gray-300 leading-relaxed">Complete campaign setup, audience targeting, bid optimization, A/B testing, performance monitoring, and regular optimization adjustments. We handle all technical aspects while you focus on running your business.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                        <button
+                            onclick="toggleFAQ(6)"
+                            class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                        >
+                            <span class="text-white font-semibold">How long is a contract?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-white transition-transform duration-200 faq-chevron" data-faq="6"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden faq-content" data-faq="6">
+                            <p class="text-gray-300 leading-relaxed">You pay at the start of each month on a rolling basis but you can cancel at any time with a written notice in Slack and e-mail. This allows you to scale up or pause services based on your business needs and performance results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="pt-2 pb-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl p-12 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Ready to Accelerate Your Growth?
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Join businesses already scaling with AI-powered marketing automation
+                    </p>
+                    
+                    <!-- GOHIGHLEVEL INTEGRATION POINT: Replace this button with your GoHighLevel form button -->
+                    <button
+                        onclick="selectPlan('premium')"
+                        class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto cursor-pointer"
+                    >
+                        Get Started Now
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-purple-400 mr-3"></i>
+                        <h3 class="text-2xl font-bold text-white">One in the Chamber</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Growing businesses seamlessly and affordably with an AI-driven marketing solution
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        © 2025 One in the Chamber. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Checkout Modal (Hidden by default) -->
+        <div id="checkout-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+            <div class="min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-4xl w-full bg-white rounded-2xl shadow-2xl max-h-[90vh] overflow-y-auto">
+                    <!-- Header -->
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-t-2xl p-6 text-white">
+                        <button
+                            onclick="closeCheckout()"
+                            class="flex items-center text-white/90 hover:text-white mb-4 transition-colors"
+                        >
+                            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                            Back
+                        </button>
+                        <h1 class="text-2xl font-bold">Complete Your Order</h1>
+                        <p class="text-white/90">One in the Chamber - <span id="selected-plan-name">Essential Plan</span></p>
+                    </div>
+
+                    <div class="p-8">
+                        <!-- What Happens Next Timeline -->
+                        <div class="mb-12">
+                            <div class="flex items-center mb-6">
+                                <i data-lucide="clock" class="w-6 h-6 text-gray-600 mr-3"></i>
+                                <h2 class="text-2xl font-bold text-gray-800">What Happens Next?</h2>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-4 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                                        1
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Within 10 Minutes</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed">You'll receive an email with an onboarding questionnaire (10 minutes to complete) plus key information for success.</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                                        2
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Within 1 Business Day</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed">You'll be invited to a dedicated Slack channel where you can message directly with our team to start sharing access to your Meta account & brand assets.</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                                        3
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Within 5 Business Days</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed">After granting Meta account access, we'll send your full campaign plans, audiences, creative assets for approval, and reporting dashboard link.</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                                        4
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Within 10 Business Days</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed">Once you have approved campaign objectives, creative, targeting, and budgets, we'll go live while you sit back and watch the growth happen!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GOHIGHLEVEL INTEGRATION POINT: Replace this entire form with your GoHighLevel form -->
+                        <!-- You can embed your GoHighLevel form here and remove the vanilla HTML form below -->
+                        <form id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
+                            <div class="grid lg:grid-cols-2 gap-12">
+                                <!-- Left Column - Plan Selection & Order Summary -->
+                                <div>
+                                    <div class="mb-8">
+                                        <h3 class="text-xl font-bold text-gray-800 mb-4">Select Your Plan</h3>
+                                        <div class="mb-4">
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Choose Plan
+                                            </label>
+                                            <div class="relative">
+                                                <select
+                                                    id="plan-select"
+                                                    onchange="updatePlanSelection()"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none bg-white"
+                                                >
+                                                    <option value="essential">Essential Plan - $2,500/month</option>
+                                                    <option value="premium">Premium Plan - $3,500/month</option>
+                                                </select>
+                                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-8">
+                                        <h3 class="text-xl font-bold text-gray-800 mb-4">Order Summary</h3>
+                                        <div class="border border-gray-200 rounded-lg p-6">
+                                            <div class="flex justify-between items-start mb-4">
+                                                <div>
+                                                    <h4 class="font-semibold text-gray-800" id="summary-plan-name">Essential Plan</h4>
+                                                    <p class="text-gray-600 text-sm">Monthly subscription</p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <div class="text-2xl font-bold text-gray-800" id="summary-price">
+                                                        $2,500
+                                                    </div>
+                                                    <div class="text-gray-600 text-sm">/month</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="border-t pt-4">
+                                                <h5 class="font-semibold text-gray-800 mb-3">Included:</h5>
+                                                <ul class="space-y-2" id="summary-features">
+                                                    <li class="flex items-start text-sm text-gray-600">
+                                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                                        Monthly ad management & optimization
+                                                    </li>
+                                                    <li class="flex items-start text-sm text-gray-600">
+                                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                                        5 custom AI-generated static image ads
+                                                    </li>
+                                                    <li class="flex items-start text-sm text-gray-600">
+                                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                                        Daily performance reporting & insights
+                                                    </li>
+                                                    <li class="flex items-start text-sm text-gray-600">
+                                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                                        Email & Slack support within 48-hours
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Security Info -->
+                                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                        <div class="flex items-center mb-2">
+                                            <i data-lucide="shield" class="w-5 h-5 text-green-600 mr-2"></i>
+                                            <span class="font-semibold text-green-800">Secure & Protected</span>
+                                        </div>
+                                        <ul class="text-sm text-green-700 space-y-1">
+                                            <li>• 256-bit SSL encryption</li>
+                                            <li>• Cancel anytime with 30-day notice</li>
+                                            <li>• No setup fees or hidden costs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column - Payment Information -->
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-6">Payment Information</h3>
+                                    
+                                    <div class="space-y-6">
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    First Name
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="firstName"
+                                                    placeholder="John"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                    required
+                                                />
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Last Name
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="lastName"
+                                                    placeholder="Doe"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Email Address
+                                            </label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                placeholder="john@example.com"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                required
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Phone Number
+                                            </label>
+                                            <input
+                                                type="tel"
+                                                name="phoneNumber"
+                                                placeholder="(555) 123-4567"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                required
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Business Website URL
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="businessUrl"
+                                                placeholder="yourbusiness.com"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                required
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Card Number
+                                            </label>
+                                            <div class="relative">
+                                                <input
+                                                    type="text"
+                                                    name="cardNumber"
+                                                    placeholder="1234 5678 9012 3456"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-12"
+                                                    required
+                                                />
+                                                <i data-lucide="credit-card" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Expiry Date
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="expiryDate"
+                                                    placeholder="MM/YY"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                    required
+                                                />
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    CVC
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="cvc"
+                                                    placeholder="123"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                                        >
+                                            <span id="checkout-button-text">Complete Order - $2,500/month</span>
+                                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                                        </button>
+
+                                        <p class="text-sm text-gray-600 text-center flex items-center justify-center mt-4">
+                                            <i data-lucide="clock" class="w-4 h-4 mr-2"></i>
+                                            Your subscription starts immediately after payment
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thank You Modal (Hidden by default) -->
+        <div id="thankyou-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+            <div class="min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-12 text-center">
+                    <!-- Success Icon -->
+                    <div class="mb-8">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="check-circle" class="w-12 h-12 text-green-600"></i>
+                        </div>
+                        
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            Welcome to One in the Chamber!
+                        </h1>
+                        
+                        <p class="text-lg text-gray-600 mb-8">
+                            Thank you for your purchase! Please check your email (including your spam folder) for an invitation to our shared Slack channel.
+                        </p>
+                    </div>
+
+                    <!-- Onboarding Timeline -->
+                    <div class="text-left mb-8">
+                        <h2 class="text-xl font-bold text-purple-600 mb-6 text-center">
+                            Your Onboarding Timeline:
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">
+                                    1
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-purple-600 mb-1">Within 10 Minutes:</h3>
+                                    <p class="text-gray-700">
+                                        You'll receive an email with an onboarding questionnaire (10 minutes to complete) plus key information for success.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">
+                                    2
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-purple-600 mb-1">Within 1 Business Day:</h3>
+                                    <p class="text-gray-700">
+                                        You'll be invited to a dedicated Slack channel where you can message directly with our team to start sharing access to your Meta account & brand assets.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">
+                                    3
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-purple-600 mb-1">Within 5 Business Days:</h3>
+                                    <p class="text-gray-700">
+                                        After granting Meta account access, we'll send your full campaign plans, audiences, creative assets for approval, and reporting dashboard link.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">
+                                    4
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-purple-600 mb-1">Within 10 Business Days:</h3>
+                                    <p class="text-gray-700">
+                                        Once you have approved campaign objectives, creative, targeting, and budgets, we'll go live while you sit back and watch the growth happen!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">
+                            Let's Blow Up the Internet Together!
+                        </h3>
+                    </div>
+
+                    <button
+                        onclick="closeThankYou()"
+                        class="mt-6 bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                    >
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Global state
+        let currentPlan = 'essential';
+        let openFAQ = null;
+
+        // Plan data
+        const planDetails = {
+            essential: {
+                name: 'Essential Plan',
+                price: 2500,
+                features: [
+                    'Monthly ad management & optimization',
+                    '5 custom AI-generated static image ads',
+                    'Daily performance reporting & insights',
+                    'Email & Slack support within 48-hours'
+                ]
+            },
+            premium: {
+                name: 'Premium Plan',
+                price: 3500,
+                features: [
+                    'Everything in Essential plan',
+                    'Quarterly AI video funnel (3 custom videos)',
+                    '1 top-of-funnel prospecting video',
+                    '2 performance retargeting videos',
+                    'Priority email & Slack support within 1 business day'
+                ]
+            }
+        };
+
+        // Scroll to pricing function
+        function scrollToPricing() {
+            const pricingSection = document.getElementById('pricing-section');
+            if (pricingSection) {
+                pricingSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Plan selection function
+        function selectPlan(plan) {
+            currentPlan = plan;
+            
+            // Update checkout modal content
+            const planData = planDetails[plan];
+            document.getElementById('selected-plan-name').textContent = planData.name;
+            document.getElementById('plan-select').value = plan;
+            updatePlanSelection();
+            
+            // Show checkout modal
+            document.getElementById('checkout-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Update plan selection in checkout
+        function updatePlanSelection() {
+            const selectedPlan = document.getElementById('plan-select').value;
+            const planData = planDetails[selectedPlan];
+            
+            // Update summary
+            document.getElementById('summary-plan-name').textContent = planData.name;
+            document.getElementById('summary-price').textContent = `$${planData.price.toLocaleString()}`;
+            document.getElementById('checkout-button-text').textContent = `Complete Order - $${planData.price.toLocaleString()}/month`;
+            
+            // Update features
+            const featuresContainer = document.getElementById('summary-features');
+            featuresContainer.innerHTML = '';
+            planData.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start text-sm text-gray-600';
+                li.innerHTML = `
+                    <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                    ${feature}
+                `;
+                featuresContainer.appendChild(li);
+            });
+            
+            currentPlan = selectedPlan;
+        }
+
+        // Close checkout modal
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Handle checkout form submission
+        function handleCheckoutSubmit(event) {
+            event.preventDefault();
+            
+            // GOHIGHLEVEL INTEGRATION POINT: 
+            // Replace this with your GoHighLevel webhook submission
+            // You can collect form data and send it to your GoHighLevel webhook here
+            
+            const formData = new FormData(event.target);
+            const data = {
+                plan: currentPlan,
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phoneNumber: formData.get('phoneNumber'),
+                businessUrl: formData.get('businessUrl'),
+                cardNumber: formData.get('cardNumber'),
+                expiryDate: formData.get('expiryDate'),
+                cvc: formData.get('cvc')
+            };
+            
+            console.log('Order submitted:', data);
+            
+            // Close checkout and show thank you
+            closeCheckout();
+            document.getElementById('thankyou-modal').classList.remove('hidden');
+        }
+
+        // Close thank you modal
+        function closeThankYou() {
+            document.getElementById('thankyou-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // FAQ toggle function
+        function toggleFAQ(index) {
+            const content = document.querySelector(`[data-faq="${index}"].faq-content`);
+            const chevron = document.querySelector(`[data-faq="${index}"].faq-chevron`);
+            
+            if (openFAQ === index) {
+                // Close current FAQ
+                content.classList.add('hidden');
+                chevron.style.transform = 'rotate(0deg)';
+                openFAQ = null;
+            } else {
+                // Close any open FAQ
+                if (openFAQ !== null) {
+                    const currentContent = document.querySelector(`[data-faq="${openFAQ}"].faq-content`);
+                    const currentChevron = document.querySelector(`[data-faq="${openFAQ}"].faq-chevron`);
+                    currentContent.classList.add('hidden');
+                    currentChevron.style.transform = 'rotate(0deg)';
+                }
+                
+                // Open new FAQ
+                content.classList.remove('hidden');
+                chevron.style.transform = 'rotate(180deg)';
+                openFAQ = index;
+            }
+        }
+
+        // Close modals when clicking outside
+        document.addEventListener('click', function(event) {
+            const checkoutModal = document.getElementById('checkout-modal');
+            const thankYouModal = document.getElementById('thankyou-modal');
+            
+            if (event.target === checkoutModal) {
+                closeCheckout();
+            }
+            if (event.target === thankYouModal) {
+                closeThankYou();
+            }
+        });
+
+        // Initialize icons after DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
