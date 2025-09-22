@@ -12,16 +12,17 @@
         /* GoHighLevel Form Styling */
         #ghl-form-container iframe {
             width: 100% !important;
-            min-height: 600px !important;
+            min-height: 800px !important;
             border: none !important;
             border-radius: 8px !important;
             background: white !important;
+            overflow: hidden !important;
         }
         
         /* Mobile responsive form */
         @media (max-width: 768px) {
             #ghl-form-container iframe {
-                min-height: 800px !important;
+                min-height: 1000px !important;
             }
         }
         
@@ -188,10 +189,11 @@
                         <iframe 
                             src="https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7"
                             width="100%" 
-                            height="600"
+                            height="800"
                             frameborder="0"
-                            scrolling="auto"
-                            id="ghl-form-iframe">
+                            scrolling="no"
+                            id="ghl-form-iframe"
+                            onload="resizeIframe(this)">
                         </iframe>
                     </div>
 
@@ -267,21 +269,49 @@
             updatePlan();
             
             // Auto-resize iframe
-            const iframe = document.getElementById('ghl-form-iframe');
-            iframe.onload = function() {
-                // Try to auto-resize iframe based on content
-                try {
-                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    const height = iframeDoc.body.scrollHeight;
+            resizeIframe(document.getElementById('ghl-form-iframe'));
+        });
+        
+        // Function to resize iframe to fit content
+        function resizeIframe(iframe) {
+            try {
+                // Try to access iframe content (may fail due to cross-origin)
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (iframeDoc) {
+                    const height = Math.max(
+                        iframeDoc.body.scrollHeight,
+                        iframeDoc.body.offsetHeight,
+                        iframeDoc.documentElement.clientHeight,
+                        iframeDoc.documentElement.scrollHeight,
+                        iframeDoc.documentElement.offsetHeight
+                    );
                     if (height > 400) {
                         iframe.style.height = height + 'px';
                     }
-                } catch (e) {
-                    // Cross-origin restrictions prevent access, use default height
-                    console.log('Using default iframe height due to cross-origin restrictions');
                 }
-            };
+            } catch (e) {
+                // Cross-origin restrictions - use message listener instead
+                console.log('Using message listener for iframe resizing');
+            }
+        }
+        
+        // Listen for messages from iframe to resize
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'resize') {
+                const iframe = document.getElementById('ghl-form-iframe');
+                if (iframe && event.data.height) {
+                    iframe.style.height = event.data.height + 'px';
+                }
+            }
         });
+        
+        // Fallback: Periodically check and adjust iframe height
+        setInterval(function() {
+            const iframe = document.getElementById('ghl-form-iframe');
+            if (iframe) {
+                resizeIframe(iframe);
+            }
+        }, 2000);
     </script>
 </body>
 </html>
