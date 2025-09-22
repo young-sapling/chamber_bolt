@@ -29,17 +29,17 @@
         .backdrop-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
     </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+<body class="min-h-screen" style="background: linear-gradient(135deg, #111827 0%, #581c87 50%, #111827 100%);">
     <!-- Hero Section -->
-    <div class="relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+    <div class="relative overflow-hidden" style="background: linear-gradient(135deg, #111827 0%, #581c87 50%, #111827 100%);">
+        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <!-- Hero Content - Split Layout -->
             <div class="grid lg:grid-cols-2 gap-6 items-center mb-16">
                 <!-- Left Column - Text Content -->
                 <div class="text-center">
                     <div class="mb-8">
-                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white mb-6">
+                        <div class="inline-flex items-center rounded-full px-6 py-3 text-white mb-6" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
                             </svg>
@@ -47,7 +47,7 @@
                         </div>
                         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                             One in the
-                            <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Chamber</span>
+                            <span style="background: linear-gradient(to right, #c084fc, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent;"> Chamber</span>
                         </h1>
                         <p class="text-xl text-gray-300 mb-8 leading-relaxed">
                             The completely AI-powered growth solution that handles your ad buying, performance content creation, and campaign reporting—all while you focus on running your business.
@@ -55,7 +55,7 @@
                         
                         <div class="mb-8">
                             <div class="flex justify-center">
-                                <button onclick="scrollToPricing()" class="animate-wiggle bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+                                <button onclick="scrollToPricing()" class="animate-wiggle text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center" style="background: linear-gradient(to right, #9333ea, #ec4899);" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'">
                                     Get Started
                                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -68,7 +68,7 @@
                 
                 <!-- Right Column - Video -->
                 <div class="flex justify-center lg:justify-start lg:ml-48">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="rounded-2xl p-6" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.2);">
                         <div class="w-80 h-[500px] rounded-xl overflow-hidden shadow-2xl border-2 border-purple-400/30">
                             <iframe 
                                 width="100%" 
@@ -88,7 +88,7 @@
             <!-- Feature Cards - Under Hero -->
             <div class="text-center mb-8">
                 <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);">
                         <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -97,7 +97,7 @@
                         <h3 class="text-lg font-semibold text-white mb-2">Smart Ad Buying</h3>
                         <p class="text-gray-300 text-sm">AI-optimized campaigns across all major platforms</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);">
                         <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
@@ -106,7 +106,7 @@
                         <h3 class="text-lg font-semibold text-white mb-2">AI Content Creation</h3>
                         <p class="text-gray-300 text-sm">Professional product content generated automatically</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);">
                         <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H9a2 2 0 01-2-2z"></path>
@@ -122,7 +122,7 @@
         <!-- Pointing Arrow -->
         <div class="flex justify-center pb-8 -mt-8">
             <div class="flex flex-col items-center">
-                <div class="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center animate-bounce">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center animate-bounce" style="border: 2px solid rgba(255, 255, 255, 0.3);">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
@@ -138,8 +138,8 @@
             <div class="max-w-4xl mx-auto mb-12">
                 <div class="bg-white rounded-2xl p-12">
                     <div class="text-center mb-8">
-                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                            Can Our AI Actually Grow Your Business?
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                            <span style="background: linear-gradient(to right, #9333ea, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent;">Can Our AI Actually Grow Your Business?</span>
                         </h2>
                         <p class="text-2xl text-gray-800 font-semibold">Yes, and here's why...</p>
                     </div>
@@ -147,7 +147,7 @@
                     <!-- Animated Arrow -->
                     <div class="flex justify-center mb-8">
                         <div class="flex flex-col items-center">
-                            <div class="w-8 h-8 border-2 border-purple-500 rounded-full flex items-center justify-center animate-bounce-arrow">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center animate-bounce-arrow" style="border: 2px solid #a855f7;">
                                 <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                 </svg>
@@ -157,21 +157,21 @@
                     
                     <div class="grid md:grid-cols-3 gap-8 mb-8">
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: linear-gradient(to right, #10b981, #059669);">
                                 <span class="text-white font-bold text-2xl">40%</span>
                             </div>
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Better Performance</h3>
                             <p class="text-gray-600 text-sm">Our AI ads have reduced cost per click, cost per lead, and improved ROAS by as much as 40%</p>
                         </div>
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: linear-gradient(to right, #3b82f6, #06b6d4);">
                                 <span class="text-white font-bold text-lg">1000+</span>
                             </div>
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Proven Data</h3>
                             <p class="text-gray-600 text-sm">Our AI creator module is trained on 1,000s of the best performing ad content in the world</p>
                         </div>
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                                 <span class="text-white font-bold text-lg">24/7</span>
                             </div>
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Always Optimizing</h3>
@@ -184,7 +184,7 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <div class="flex items-start">
-                                    <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3 mt-1" style="background: #f3e8ff;">
                                         <span class="text-purple-600 font-bold text-sm">✓</span>
                                     </div>
                                     <div>
@@ -195,7 +195,7 @@
                             </div>
                             <div>
                                 <div class="flex items-start">
-                                    <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3 mt-1" style="background: #f3e8ff;">
                                         <span class="text-purple-600 font-bold text-sm">✓</span>
                                     </div>
                                     <div>
@@ -206,7 +206,7 @@
                             </div>
                             <div>
                                 <div class="flex items-start">
-                                    <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3 mt-1" style="background: #f3e8ff;">
                                         <span class="text-purple-600 font-bold text-sm">✓</span>
                                     </div>
                                     <div>
@@ -217,7 +217,7 @@
                             </div>
                             <div>
                                 <div class="flex items-start">
-                                    <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3 mt-1" style="background: #f3e8ff;">
                                         <span class="text-purple-600 font-bold text-sm">✓</span>
                                     </div>
                                     <div>
@@ -239,7 +239,7 @@
             <div class="max-w-4xl mx-auto">
                 <div class="grid lg:grid-cols-2 gap-6 items-center">
                     <!-- Left Column - Content -->
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full flex flex-col justify-center">
+                    <div class="rounded-2xl p-8 h-full flex flex-col justify-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.2);">
                         <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
                             What Will My Content Look Like?
                         </h2>
@@ -294,7 +294,7 @@
 
                     <!-- Right Column - Video -->
                     <div class="flex justify-center">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 h-full flex items-center justify-center">
+                        <div class="rounded-2xl p-6 h-full flex items-center justify-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.2);">
                             <div class="w-80 h-[500px] rounded-xl overflow-hidden shadow-2xl border-2 border-purple-400/30">
                                 <iframe 
                                     width="100%" 
@@ -327,9 +327,9 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                             </svg>
@@ -340,9 +340,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Complete our comprehensive questionnaire about your business and goals</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
                             </svg>
@@ -353,9 +353,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Grant us secure access to your Meta advertising accounts</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                             </svg>
@@ -366,9 +366,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Use our AI chat to generate a detailed creative brief for your campaigns</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
@@ -379,9 +379,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Get custom AI-generated performance content in 3-5 business days</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10V9a2 2 0 012-2h2a2 2 0 012 2v1M9 10H7a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2h-2"></path>
                             </svg>
@@ -392,9 +392,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Review and approve your content and audiences, then launch your ad campaigns</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
@@ -405,9 +405,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Track performance with our daily-updating analytics dashboard</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
@@ -418,9 +418,9 @@
                     <p class="text-gray-300 text-xs leading-relaxed">Pause campaigns anytime or increase spending as desired</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/15 animate-fade-in-up">
+                <div class="rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
                     <div class="relative mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background: linear-gradient(to right, #a855f7, #ec4899);">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                             </svg>
@@ -485,7 +485,7 @@
                         </div>
                     </div>
                     
-                    <button onclick="selectPlan('essential')" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                    <button onclick="selectPlan('essential')" class="w-full text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(to right, #9333ea, #ec4899);" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'">
                         Choose Essential Plan
                     </button>
                 </div>
@@ -540,7 +540,7 @@
                         </div>
                     </div>
                     
-                    <button onclick="selectPlan('premium')" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                    <button onclick="selectPlan('premium')" class="w-full text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(to right, #9333ea, #ec4899);" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'">
                         Choose Premium Plan
                     </button>
                 </div>
@@ -577,7 +577,7 @@
                     Join businesses already scaling with AI-powered marketing automation
                 </p>
                 
-                <button onclick="selectPlan('premium')" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto cursor-pointer">
+                <button onclick="selectPlan('premium')" class="text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center mx-auto cursor-pointer" style="background: linear-gradient(to right, #9333ea, #ec4899);" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'">
                     Get Started Now
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -645,7 +645,7 @@
         function renderFAQs() {
             const container = document.getElementById('faq-container');
             container.innerHTML = faqs.map((faq, index) => `
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+                <div class="rounded-xl overflow-hidden" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.2);">
                     <button onclick="toggleFAQ(${index})" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200">
                         <span class="text-white font-semibold">${faq.question}</span>
                         <svg class="w-5 h-5 text-white transition-transform duration-200 ${openFAQ === index ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
