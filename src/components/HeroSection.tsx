@@ -78,21 +78,21 @@ export default function HeroSection({ onPlanSelection }: HeroSectionProps) {
                 <Target className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Smart Ad Buying</h3>
-              <p className="text-gray-300 text-sm">AI-optimized campaigns across all major platforms</p>
+              <p className="text-gray-200 text-sm">AI-optimized campaigns across all major platforms</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">AI Content Creation</h3>
-              <p className="text-gray-300 text-sm">Professional product content generated automatically</p>
+              <p className="text-gray-200 text-sm">Professional product content generated automatically</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Monthly Reporting</h3>
-              <p className="text-gray-300 text-sm">Detailed insights and performance analytics</p>
+              <p className="text-gray-200 text-sm">Detailed insights and performance analytics</p>
             </div>
           </div>
         </div>

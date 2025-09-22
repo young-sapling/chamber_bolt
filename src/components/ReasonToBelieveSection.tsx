@@ -32,21 +32,21 @@ export default function ReasonToBelieveSection() {
               <span className="text-white font-bold text-2xl">40%</span>
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Better Performance</h3>
-            <p className="text-gray-600 text-sm">Our AI ads have reduced cost per click, cost per lead, and improved ROAS by as much as 40%</p>
+            <p className="text-gray-800 text-sm">Our AI ads have reduced cost per click, cost per lead, and improved ROAS by as much as 40%</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-white font-bold text-lg">1000+</span>
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Proven Data</h3>
-            <p className="text-gray-600 text-sm">Our AI creator module is trained on 1,000s of the best performing ad content in the world</p>
+            <p className="text-gray-800 text-sm">Our AI creator module is trained on 1,000s of the best performing ad content in the world</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-white font-bold text-lg">24/7</span>
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Always Optimizing</h3>
-            <p className="text-gray-600 text-sm">AI never sleeps - continuous optimization and performance monitoring around the clock</p>
+            <p className="text-gray-800 text-sm">AI never sleeps - continuous optimization and performance monitoring around the clock</p>
           </div>
         </div>
         
@@ -60,7 +60,7 @@ export default function ReasonToBelieveSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-600 mb-2">Decades of Experience</h4>
-                  <p className="text-gray-600 text-sm">We've been growing brands for decades, now supercharged with AI technology</p>
+                  <p className="text-gray-800 text-sm">We've been growing brands for decades, now supercharged with AI technology</p>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function ReasonToBelieveSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-600 mb-2">Performance-First Approach</h4>
-                  <p className="text-gray-600 text-sm">Every piece of content is reverse-engineered from high-performing campaigns</p>
+                  <p className="text-gray-800 text-sm">Every piece of content is reverse-engineered from high-performing campaigns</p>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function ReasonToBelieveSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-600 mb-2">Brand Safety Guaranteed</h4>
-                  <p className="text-gray-600 text-sm">Professional, on-brand content that maintains your reputation while driving results</p>
+                  <p className="text-gray-800 text-sm">Professional, on-brand content that maintains your reputation while driving results</p>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function ReasonToBelieveSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-600 mb-2">Full Control</h4>
-                  <p className="text-gray-600 text-sm">You approve everything - content, audiences, budgets. We never launch without your approval</p>
+                  <p className="text-gray-800 text-sm">You approve everything - content, audiences, budgets. We never launch without your approval</p>
                 </div>
               </div>
             </div>
