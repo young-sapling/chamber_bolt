@@ -3,728 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One in the Chamber - AI-Powered Growth Solution</title>
-    <style>
-        html { scroll-behavior: smooth; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1f2937 0%, #7c3aed 50%, #1f2937 100%);
-            min-height: 100vh;
-        }
-        
-        @keyframes wiggle {
-            0%, 5%, 10%, 15%, 20%, 25% { transform: rotate(0deg); }
-            2.5%, 7.5%, 12.5%, 17.5%, 22.5% { transform: rotate(-2deg); }
-            5%, 10%, 15%, 20% { transform: rotate(2deg); }
-            25%, 100% { transform: rotate(0deg); }
-        }
-        
-        @keyframes bounceArrow {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(10px); }
-            60% { transform: translateY(5px); }
-        }
-        
-        .wiggle-animation { animation: wiggle 4s ease-in-out infinite; }
-        .bounce-arrow { animation: bounceArrow 2s infinite; }
-        
-        .faq-answer { display: none; }
-        .faq-answer.active { display: block; }
-        .faq-chevron { transition: transform 0.2s ease; }
-        .faq-chevron.rotated { transform: rotate(180deg); }
-    </style>
+    <title>One in the Chamber - AI-Powered Growth</title>
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #1f2937 0%, #7c3aed 50%, #1f2937 100%); min-height: 100vh; color: white;">
+
     <!-- Hero Section -->
-    <div style="position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));"></div>
-        <div style="position: relative; max-width: 80rem; margin: 0 auto; padding: 1rem; padding-top: 4rem; padding-bottom: 4rem;">
-            <!-- Hero Content -->
-            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; margin-bottom: 4rem;">
-                <!-- Text Content -->
-                <div style="text-align: center;">
-                    <div style="margin-bottom: 2rem;">
-                        <div style="display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 9999px; padding: 0.75rem 1.5rem; color: white; margin-bottom: 1.5rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
-                            </svg>
-                            Introducing Chamber Media's Latest Innovation
-                        </div>
-                        <h1 style="font-size: 4rem; font-weight: bold; color: white; margin-bottom: 1.5rem; line-height: 1.1;">
-                            One in the
-                            <span style="background: linear-gradient(to right, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"> Chamber</span>
-                        </h1>
-                        <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 2rem; line-height: 1.6;">
-                            The completely AI-powered growth solution that handles your ad buying, performance content creation, and campaign reporting—all while you focus on running your business.
-                        </p>
-                       
-                       <div style="margin-bottom: 2rem;">
-                         <div style="display: flex; justify-content: center;">
-                           <button onclick="scrollToPricing()" style="background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; border: none; cursor: pointer; display: inline-flex; align-items: center; transition: all 0.3s ease;" class="wiggle-animation" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'; this.style.transform='scale(1)'">
-                             Get Started
-                             <svg style="width: 1.25rem; height: 1.25rem; margin-left: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                             </svg>
-                           </button>
-                         </div>
-                       </div>
-                    </div>
-                </div>
-                
-                <!-- Video -->
-                <div style="display: flex; justify-content: center;">
-                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <div style="width: 20rem; height: 31.25rem; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 2px solid rgba(168, 85, 247, 0.3);">
-                            <iframe 
-                                width="100%" 
-                                height="100%" 
-                                src="https://www.youtube.com/embed/ge5c3kNLrPY?si=TIHskendq_ocSHw-&autoplay=1&mute=1&loop=1&playlist=ge5c3kNLrPY&controls=0&showinfo=0&rel=0&iv_load_policy=3" 
-                                title="AI Content Examples" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen
-                                style="border-radius: 0.75rem;">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Feature Cards -->
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 56rem; margin: 0 auto 2rem auto;">
-                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1.5rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <div style="width: 3rem; height: 3rem; background: #9333ea; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                            <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Smart Ad Buying</h3>
-                        <p style="color: #e5e7eb; font-size: 0.875rem;">AI-optimized campaigns across all major platforms</p>
-                    </div>
-                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1.5rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <div style="width: 3rem; height: 3rem; background: #ec4899; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                            <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">AI Content Creation</h3>
-                        <p style="color: #e5e7eb; font-size: 0.875rem;">Professional product content generated automatically</p>
-                    </div>
-                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1.5rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <div style="width: 3rem; height: 3rem; background: #3b82f6; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                            <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Monthly Reporting</h3>
-                        <p style="color: #e5e7eb; font-size: 0.875rem;">Detailed insights and performance analytics</p>
-                    </div>
-                </div>
-            </div>
+    <div style="text-align: center; padding: 60px 20px;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 50px; padding: 12px 24px; display: inline-block; margin-bottom: 30px;">
+            ✨ Introducing Chamber Media's Latest Innovation
         </div>
         
-        <!-- Pointing Arrow -->
-        <div style="display: flex; justify-content: center; padding-bottom: 2rem; margin-top: -2rem;">
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 3rem; height: 3rem; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center;" class="bounce-arrow">
-                    <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
-                </div>
-                <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.875rem; margin-top: 0.5rem;">Scroll to see how AI ads work</p>
-            </div>
+        <h1 style="font-size: 48px; font-weight: bold; margin: 0 0 20px 0; color: white;">
+            One in the <span style="background: linear-gradient(to right, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Chamber</span>
+        </h1>
+        
+        <p style="font-size: 20px; color: #d1d5db; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            The completely AI-powered growth solution that handles your ad buying, performance content creation, and campaign reporting—all while you focus on running your business.
+        </p>
+        
+        <button onclick="scrollToPricing()" style="background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 16px 32px; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-bottom: 60px;">
+            Get Started →
+        </button>
+        
+        <!-- Video -->
+        <div style="max-width: 320px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 16px;">
+            <iframe width="280" height="400" src="https://www.youtube.com/embed/ge5c3kNLrPY?autoplay=1&mute=1&loop=1&playlist=ge5c3kNLrPY&controls=0" frameborder="0" allowfullscreen style="border-radius: 12px;"></iframe>
         </div>
     </div>
 
-    <!-- Reason to Believe Section -->
-    <div style="max-width: 56rem; margin: 0 auto 3rem auto; padding: 0 1rem;">
-        <div style="background: white; border-radius: 1rem; padding: 3rem;">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h2 style="font-size: 3rem; font-weight: bold; background: linear-gradient(to right, #9333ea, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem;">
-                    Can Our AI Actually Grow Your Business?
-                </h2>
-                <p style="font-size: 1.5rem; color: #1f2937; font-weight: 600;">Yes, and here's why...</p>
+    <!-- Features -->
+    <div style="padding: 40px 20px; text-align: center;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto;">
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 16px;">
+                <div style="width: 60px; height: 60px; background: #9333ea; border-radius: 12px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 24px;">🎯</div>
+                <h3 style="color: white; margin-bottom: 10px;">Smart Ad Buying</h3>
+                <p style="color: #d1d5db;">AI-optimized campaigns across all major platforms</p>
             </div>
-            
-            <!-- Animated Arrow -->
-            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="width: 2rem; height: 2rem; border: 2px solid #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center;" class="bounce-arrow">
-                        <svg style="width: 1.25rem; height: 1.25rem; color: #9333ea;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                        </svg>
-                    </div>
-                </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 16px;">
+                <div style="width: 60px; height: 60px; background: #ec4899; border-radius: 12px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 24px;">✨</div>
+                <h3 style="color: white; margin-bottom: 10px;">AI Content Creation</h3>
+                <p style="color: #d1d5db;">Professional product content generated automatically</p>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div style="text-align: center;">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(to right, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                        <span style="color: white; font-weight: bold; font-size: 1.5rem;">40%</span>
-                    </div>
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Better Performance</h3>
-                    <p style="color: #1f2937; font-size: 0.875rem;">Our AI ads have reduced cost per click, cost per lead, and improved ROAS by as much as 40%</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(to right, #3b82f6, #06b6d4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                        <span style="color: white; font-weight: bold; font-size: 1.125rem;">1000+</span>
-                    </div>
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Proven Data</h3>
-                    <p style="color: #1f2937; font-size: 0.875rem;">Our AI creator module is trained on 1,000s of the best performing ad content in the world</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="width: 4rem; height: 4rem; background: linear-gradient(to right, #9333ea, #ec4899); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                        <span style="color: white; font-weight: bold; font-size: 1.125rem;">24/7</span>
-                    </div>
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Always Optimizing</h3>
-                    <p style="color: #1f2937; font-size: 0.875rem;">AI never sleeps - continuous optimization and performance monitoring around the clock</p>
-                </div>
-            </div>
-            
-            <div style="background: #f9fafb; border-radius: 0.75rem; padding: 2rem; border: 1px solid #e5e7eb;">
-                <h3 style="font-size: 1.25rem; font-weight: bold; color: #1f2937; margin-bottom: 1.5rem; text-align: center;">The Chamber Media Advantage</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                    <div style="display: flex; align-items: flex-start;">
-                        <div style="width: 2rem; height: 2rem; background: #ede9fe; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;">
-                            <span style="color: #9333ea; font-weight: bold; font-size: 0.875rem;">✓</span>
-                        </div>
-                        <div>
-                            <h4 style="font-weight: 600; color: #9333ea; margin-bottom: 0.5rem;">Decades of Experience</h4>
-                            <p style="color: #1f2937; font-size: 0.875rem;">We've been growing brands for decades, now supercharged with AI technology</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: flex-start;">
-                        <div style="width: 2rem; height: 2rem; background: #ede9fe; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;">
-                            <span style="color: #9333ea; font-weight: bold; font-size: 0.875rem;">✓</span>
-                        </div>
-                        <div>
-                            <h4 style="font-weight: 600; color: #9333ea; margin-bottom: 0.5rem;">Performance-First Approach</h4>
-                            <p style="color: #1f2937; font-size: 0.875rem;">Every piece of content is reverse-engineered from high-performing campaigns</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: flex-start;">
-                        <div style="width: 2rem; height: 2rem; background: #ede9fe; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;">
-                            <span style="color: #9333ea; font-weight: bold; font-size: 0.875rem;">✓</span>
-                        </div>
-                        <div>
-                            <h4 style="font-weight: 600; color: #9333ea; margin-bottom: 0.5rem;">Brand Safety Guaranteed</h4>
-                            <p style="color: #1f2937; font-size: 0.875rem;">Professional, on-brand content that maintains your reputation while driving results</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: flex-start;">
-                        <div style="width: 2rem; height: 2rem; background: #ede9fe; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; margin-top: 0.25rem; flex-shrink: 0;">
-                            <span style="color: #9333ea; font-weight: bold; font-size: 0.875rem;">✓</span>
-                        </div>
-                        <div>
-                            <h4 style="font-weight: 600; color: #9333ea; margin-bottom: 0.5rem;">Full Control</h4>
-                            <p style="color: #1f2937; font-size: 0.875rem;">You approve everything - content, audiences, budgets. We never launch without your approval</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Video Showcase Section -->
-    <section style="padding: 2rem 1rem;">
-        <div style="max-width: 56rem; margin: 0 auto;">
-            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center;">
-                <!-- Content -->
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2); height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                    <h2 style="font-size: 2.25rem; font-weight: bold; color: white; margin-bottom: 1.5rem;">
-                        What Will My Content Look Like?
-                    </h2>
-                    <p style="font-size: 1.25rem; color: white; margin-bottom: 2rem; font-weight: 500;">
-                        Professional, performance-driven content that's completely brand safe
-                    </p>
-
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <div style="width: 3rem; height: 3rem; background: #9333ea; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 style="font-size: 1.25rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Bespoke Assets</h3>
-                                <p style="color: white;">
-                                    Every piece of content is custom-created for your specific brand, products, and audience
-                                </p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <div style="width: 3rem; height: 3rem; background: #ec4899; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 style="font-size: 1.25rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Reverse Engineered</h3>
-                                <p style="color: white;">
-                                    Built from the DNA of top-performing campaigns to maximize your conversion rates
-                                </p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                            <div style="width: 3rem; height: 3rem; background: #3b82f6; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.586-3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 style="font-size: 1.25rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Brand Safe</h3>
-                                <p style="color: white;">
-                                    Professional quality that maintains your brand integrity while driving performance
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video -->
-                <div style="display: flex; justify-content: center; margin-top: 2rem;">
-                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.2); height: 100%; display: flex; align-items: center; justify-content: center;">
-                        <div style="width: 20rem; height: 31.25rem; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 2px solid rgba(168, 85, 247, 0.3);">
-                            <iframe 
-                                width="100%" 
-                                height="100%" 
-                                src="https://www.youtube.com/embed/ge5c3kNLrPY?si=TIHskendq_ocSHw-&autoplay=1&mute=1&loop=1&playlist=ge5c3kNLrPY&controls=0&showinfo=0&rel=0&iv_load_policy=3" 
-                                title="AI Content Examples" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen
-                                style="border-radius: 0.75rem;">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <div style="max-width: 72rem; margin: 0 auto 4rem auto; padding: 0 1rem;">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2 style="font-size: 2.25rem; font-weight: bold; color: white; margin-bottom: 1rem;">
-                How It Works
-            </h2>
-            <p style="font-size: 1.25rem; color: white; font-weight: 500;">
-                Your journey to AI-powered growth in 8 simple steps
-            </p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        1
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Fill Out Intake Form</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Complete our comprehensive questionnaire about your business and goals</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #ec4899; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        2
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Share Meta Account Access</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Grant us secure access to your Meta advertising accounts</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        3
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">AI Chat Creative Brief</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Use our AI chat to generate a detailed creative brief for your campaigns</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        4
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Receive AI Content</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Get custom AI-generated performance content in 3-5 business days</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10V9a2 2 0 012-2h2a2 2 0 012 2v1M9 10H7a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2h-2"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        5
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Approve & Launch</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Review and approve your content and audiences, then launch your ad campaigns</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        6
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Monitor Dashboard</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Track performance with our daily-updating analytics dashboard</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        7
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Control Your Spend</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Pause campaigns anytime or increase spending as desired</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.1)'">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 3rem; height: 3rem; background: #06b6d4; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
-                        <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                        </svg>
-                    </div>
-                    <div style="position: absolute; top: -0.25rem; right: -0.25rem; width: 1.5rem; height: 1.5rem; background: white; color: #9333ea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">
-                        8
-                    </div>
-                </div>
-                <h3 style="font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Rinse, Repeat, Grow</h3>
-                <p style="color: white; font-size: 0.75rem; line-height: 1.5; font-weight: 500;">Continuously optimize and scale your successful campaigns</p>
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 16px;">
+                <div style="width: 60px; height: 60px; background: #3b82f6; border-radius: 12px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 24px;">📊</div>
+                <h3 style="color: white; margin-bottom: 10px;">Monthly Reporting</h3>
+                <p style="color: #d1d5db;">Detailed insights and performance analytics</p>
             </div>
         </div>
     </div>
 
     <!-- Pricing Section -->
-    <section id="pricing-section" style="padding: 0.5rem 1rem;">
-        <div style="max-width: 72rem; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="font-size: 2.25rem; font-weight: bold; color: white; margin-bottom: 1rem;">
-                    Choose Your Growth Plan
-                </h2>
-                <p style="font-size: 1.25rem; color: white; font-weight: 500;">
-                    Two powerful options designed to scale your business
-                </p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 56rem; margin: 0 auto;">
-                <!-- Essential Plan -->
-                <div style="background: white; border-radius: 1rem; padding: 2rem; position: relative; transition: all 0.3s ease; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)'">
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: bold; color: #1f2937; margin-bottom: 0.5rem;">Essential</h3>
-                        <div style="margin-bottom: 1rem;">
-                            <span style="font-size: 2.25rem; font-weight: bold; color: #1f2937;">$2,500</span>
-                            <span style="color: #4b5563;">/month</span>
-                        </div>
-                        <p style="color: #4b5563;">Perfect for getting started with AI-powered ads</p>
-                    </div>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">Monthly ad management & optimization</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">5 custom AI-generated static image ads</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">Daily performance reporting & insights</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">Email & Slack support within 48-hours</span>
-                        </div>
-                    </div>
-                    
-                    <a href="https://www.chambermedia.app/chamber-one-plans?plan=essential" style="width: 100%; background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease; text-align: center; display: block; text-decoration: none;" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'; this.style.transform='scale(1)'">
-                        Choose Essential Plan
-                    </a>
+    <div id="pricing" style="padding: 60px 20px; text-align: center;">
+        <h2 style="font-size: 36px; color: white; margin-bottom: 40px;">Choose Your Growth Plan</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto;">
+            <!-- Essential Plan -->
+            <div style="background: white; padding: 40px; border-radius: 16px; color: #1f2937;">
+                <h3 style="font-size: 24px; margin-bottom: 10px; color: #1f2937;">Essential</h3>
+                <div style="font-size: 36px; font-weight: bold; margin-bottom: 20px; color: #1f2937;">$2,500<span style="font-size: 16px; color: #6b7280;">/month</span></div>
+                
+                <div style="text-align: left; margin-bottom: 30px;">
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ Monthly ad management & optimization</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ 5 custom AI-generated static image ads</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ Daily performance reporting & insights</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ Email & Slack support within 48-hours</div>
                 </div>
                 
-                <!-- Premium Plan -->
-                <div style="background: white; border-radius: 1rem; padding: 2rem; position: relative; border: 2px solid #9333ea; transition: all 0.3s ease; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)'; this.style.borderColor='#7c3aed'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)'; this.style.borderColor='#9333ea'">
-                    <div style="position: absolute; top: -1rem; left: 50%; transform: translateX(-50%);">
-                        <span style="background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 0.5rem 1.5rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">
-                            Most Popular
-                        </span>
-                    </div>
-                    
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: bold; color: #1f2937; margin-bottom: 0.5rem;">Premium</h3>
-                        <div style="margin-bottom: 1rem;">
-                            <span style="font-size: 2.25rem; font-weight: bold; color: #1f2937;">$3,500</span>
-                            <span style="color: #4b5563;">/month</span>
-                        </div>
-                        <p style="color: #4b5563;">Complete AI video funnel for maximum impact</p>
-                    </div>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">Everything in Essential plan</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">Quarterly AI video funnel (3 custom videos)</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">1 top-of-funnel prospecting video</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">2 performance retargeting videos</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; color: #10b981; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span style="color: #374151;">Priority email & Slack support within 1 business day</span>
-                        </div>
-                    </div>
-                    
-                    <a href="https://www.chambermedia.app/chamber-one-plans?plan=premium" style="width: 100%; background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease; text-align: center; display: block; text-decoration: none;" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'; this.style.transform='scale(1)'">
-                        Choose Premium Plan
-                    </a>
+                <button onclick="window.location.href='https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7?plan=essential'" style="width: 100%; background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 16px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                    Choose Essential Plan
+                </button>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 3px solid #9333ea; position: relative; color: #1f2937;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: bold;">
+                    Most Popular
                 </div>
+                
+                <h3 style="font-size: 24px; margin-bottom: 10px; color: #1f2937;">Premium</h3>
+                <div style="font-size: 36px; font-weight: bold; margin-bottom: 20px; color: #1f2937;">$3,500<span style="font-size: 16px; color: #6b7280;">/month</span></div>
+                
+                <div style="text-align: left; margin-bottom: 30px;">
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ Everything in Essential plan</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ Quarterly AI video funnel (3 custom videos)</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ 1 top-of-funnel prospecting video</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ 2 performance retargeting videos</div>
+                    <div style="margin-bottom: 10px; color: #1f2937;">✓ Priority support within 1 business day</div>
+                </div>
+                
+                <button onclick="window.location.href='https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7?plan=premium'" style="width: 100%; background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 16px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                    Choose Premium Plan
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- FAQ Section -->
-    <section style="padding: 4rem 1rem;">
-        <div style="max-width: 56rem; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="font-size: 2.25rem; font-weight: bold; color: white; margin-bottom: 1rem;">
-                    Frequently Asked Questions
-                </h2>
-                <p style="font-size: 1.25rem; color: white;">
-                    Everything you need to know about One in the Chamber
-                </p>
+    <div style="padding: 60px 20px;">
+        <h2 style="text-align: center; font-size: 36px; color: white; margin-bottom: 40px;">Frequently Asked Questions</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: rgba(255,255,255,0.1); margin-bottom: 15px; border-radius: 12px; overflow: hidden;">
+                <button onclick="toggleFAQ(1)" style="width: 100%; background: none; border: none; padding: 20px; text-align: left; color: white; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    How will communication work?
+                    <span id="chevron1">▼</span>
+                </button>
+                <div id="faq1" style="display: none; padding: 0 20px 20px 20px; color: white;">
+                    All communication and customer service happens via email and Slack for streamlined, efficient support. No phone calls are available with One in the Chamber.
+                </div>
             </div>
             
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(0)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>How will communication work?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-0">
-                        <p style="color: white; line-height: 1.6;">All communication and customer service happens via email and Slack for streamlined, efficient support. No phone calls are available with One in the Chamber. Need more hands-on support? Consider working directly with Chamber Media for a more personalized experience.</p>
-                    </div>
+            <div style="background: rgba(255,255,255,0.1); margin-bottom: 15px; border-radius: 12px; overflow: hidden;">
+                <button onclick="toggleFAQ(2)" style="width: 100%; background: none; border: none; padding: 20px; text-align: left; color: white; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    Can AI content really drive growth?
+                    <span id="chevron2">▼</span>
+                </button>
+                <div id="faq2" style="display: none; padding: 0 20px 20px 20px; color: white;">
+                    Yes! Our AI is trained on thousands of high-performing campaigns and has consistently delivered 40% better performance metrics including reduced cost per click, lower cost per lead, and improved ROAS for our clients.
                 </div>
-
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(1)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>Can AI content really drive growth?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-1">
-                        <p style="color: white; line-height: 1.6;">Yes! Our AI is trained on thousands of high-performing campaigns and has consistently delivered 40% better performance metrics including reduced cost per click, lower cost per lead, and improved ROAS for our clients.</p>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(2)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>What will my AI content look like?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-2">
-                        <p style="color: white; line-height: 1.6;">Your content will be professional, brand-safe, and custom-created for your specific products and audience. Every piece is reverse-engineered from top-performing campaigns to maximize conversion rates while maintaining your brand integrity.</p>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(3)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>What are the risks?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-3">
-                        <p style="color: white; line-height: 1.6;">As with any marketing, there are always risks involved, but we minimized them with decades of experience growing brands. Most importantly, you still have total control. Our AI creates brand-safe content and campaign optimizations, but you approve all budgets, campaigns, targeting, and creative. You can pause or adjust spending at any time.</p>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(4)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>Is ad spend included?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-4">
-                        <p style="color: white; line-height: 1.6;">No, ad spend is separate from our service fees. You maintain full control over your advertising budget and can adjust spending based on performance and your business goals.</p>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(5)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>What does ad management include?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-5">
-                        <p style="color: white; line-height: 1.6;">Complete campaign setup, audience targeting, bid optimization, A/B testing, performance monitoring, and regular optimization adjustments. We handle all technical aspects while you focus on running your business.</p>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden;">
-                    <button onclick="toggleFAQ(6)" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600; font-size: 1rem; transition: background-color 0.2s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.background='none'">
-                        <span>How long is a contract?</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; color: white; transition: transform 0.2s ease;" id="chevron-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;" id="answer-6">
-                        <p style="color: white; line-height: 1.6;">You pay at the start of each month on a rolling basis but you can cancel at any time with a written notice in Slack and e-mail. This allows you to scale up or pause services based on your business needs and performance results.</p>
-                    </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); margin-bottom: 15px; border-radius: 12px; overflow: hidden;">
+                <button onclick="toggleFAQ(3)" style="width: 100%; background: none; border: none; padding: 20px; text-align: left; color: white; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    What are the risks?
+                    <span id="chevron3">▼</span>
+                </button>
+                <div id="faq3" style="display: none; padding: 0 20px 20px 20px; color: white;">
+                    As with any marketing, there are always risks involved, but we minimized them with decades of experience growing brands. Most importantly, you still have total control.
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section style="padding: 0.5rem 1rem 4rem 1rem;">
-        <div style="max-width: 56rem; margin: 0 auto;">
-            <div style="background: white; border-radius: 1rem; padding: 3rem; text-align: center;">
-                <h2 style="font-size: 2.25rem; font-weight: bold; color: #1f2937; margin-bottom: 1rem;">
-                    Ready to Accelerate Your Growth?
-                </h2>
-                <p style="font-size: 1.25rem; color: #4b5563; margin-bottom: 2rem;">
-                    Join businesses already scaling with AI-powered marketing automation
-                </p>
-                
-                <a href="https://www.chambermedia.app/chamber-one-plans?plan=premium" style="background: linear-gradient(to right, #9333ea, #ec4899); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease; display: inline-flex; align-items: center; text-decoration: none;" onmouseover="this.style.background='linear-gradient(to right, #7c3aed, #db2777)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='linear-gradient(to right, #9333ea, #ec4899)'; this.style.transform='scale(1)'">
-                    Get Started Now
-                    <svg style="width: 1.25rem; height: 1.25rem; margin-left: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer style="background: #1f2937; padding: 3rem 1rem;">
-        <div style="max-width: 72rem; margin: 0 auto;">
-            <div style="text-align: center;">
-                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <svg style="width: 2rem; height: 2rem; color: #a855f7; margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
-                    </svg>
-                    <h3 style="font-size: 1.5rem; font-weight: bold; color: white;">One in the Chamber</h3>
-                </div>
-                <p style="color: #9ca3af; margin-bottom: 1.5rem;">
-                    Growing businesses seamlessly and affordably with an AI-driven marketing solution
-                </p>
-                <p style="color: #6b7280; font-size: 0.875rem;">
-                    © 2025 One in the Chamber. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+    <div style="background: #1f2937; padding: 40px 20px; text-align: center;">
+        <h3 style="color: white; margin-bottom: 10px;">One in the Chamber</h3>
+        <p style="color: #9ca3af; margin-bottom: 20px;">Growing businesses seamlessly and affordably with an AI-driven marketing solution</p>
+        <p style="color: #6b7280; font-size: 14px;">© 2025 One in the Chamber. All rights reserved.</p>
+    </div>
 
     <script>
         function scrollToPricing() {
-            const pricingSection = document.getElementById('pricing-section');
-            if (pricingSection) {
-                pricingSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
         }
-
-        function toggleFAQ(index) {
-            const answer = document.getElementById(`answer-${index}`);
-            const chevron = document.getElementById(`chevron-${index}`);
+        
+        function toggleFAQ(num) {
+            const faq = document.getElementById('faq' + num);
+            const chevron = document.getElementById('chevron' + num);
             
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-                chevron.style.transform = 'rotate(0deg)';
+            if (faq.style.display === 'none') {
+                faq.style.display = 'block';
+                chevron.innerHTML = '▲';
             } else {
-                // Close all other FAQs
-                for (let i = 0; i < 7; i++) {
-                    const otherAnswer = document.getElementById(`answer-${i}`);
-                    const otherChevron = document.getElementById(`chevron-${i}`);
-                    if (otherAnswer && otherChevron) {
-                        otherAnswer.style.display = 'none';
-                        otherChevron.style.transform = 'rotate(0deg)';
-                    }
-                }
-                
-                // Open this FAQ
-                answer.style.display = 'block';
-                chevron.style.transform = 'rotate(180deg)';
+                faq.style.display = 'none';
+                chevron.innerHTML = '▼';
             }
         }
     </script>
