@@ -12,7 +12,7 @@ export default function VideoShowcaseSection() {
               What Will My Content Look Like?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Professional, performance-driven content that's completely brand safe
+              <span className="text-white font-medium">Professional, performance-driven content that's completely brand safe</span>
             </p>
 
             <div className="space-y-6">
@@ -23,7 +23,7 @@ export default function VideoShowcaseSection() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Bespoke Assets</h3>
                   <p className="text-purple-100">
-                    Every piece of content is custom-created for your specific brand, products, and audience
+                    <span className="text-gray-200">Every piece of content is custom-created for your specific brand, products, and audience</span>
                   </p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ export default function VideoShowcaseSection() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Reverse Engineered</h3>
                   <p className="text-purple-100">
-                    Built from the DNA of top-performing campaigns to maximize your conversion rates
+                    <span className="text-gray-200">Built from the DNA of top-performing campaigns to maximize your conversion rates</span>
                   </p>
                 </div>
               </div>
@@ -47,7 +47,7 @@ export default function VideoShowcaseSection() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Brand Safe</h3>
                   <p className="text-purple-100">
-                    Professional quality that maintains your brand integrity while driving performance
+                    <span className="text-gray-200">Professional quality that maintains your brand integrity while driving performance</span>
                   </p>
                 </div>
               </div>
