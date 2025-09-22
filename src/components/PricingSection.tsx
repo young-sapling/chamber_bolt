@@ -14,7 +14,7 @@ export default function PricingSection({ onPlanSelection }: PricingSectionProps)
             Choose Your Growth Plan
           </h2>
           <p className="text-xl text-gray-300">
-            Two powerful options designed to scale your business
+            <span className="text-gray-100 font-medium">Two powerful options designed to scale your business</span>
           </p>
         </div>
         

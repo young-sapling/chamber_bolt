@@ -60,7 +60,7 @@ export default function HowItWorksSection() {
           How It Works
         </h2>
         <p className="text-xl text-gray-300">
-          Your journey to AI-powered growth in 8 simple steps
+          <span className="text-gray-100 font-medium">Your journey to AI-powered growth in 8 simple steps</span>
         </p>
       </div>
       
@@ -83,7 +83,7 @@ export default function HowItWorksSection() {
               </div>
             </div>
             <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-            <p className="text-gray-300 text-xs leading-relaxed">{item.description}</p>
+            <p className="text-gray-200 text-xs leading-relaxed font-medium">{item.description}</p>
           </div>
         ))}
       </div>
