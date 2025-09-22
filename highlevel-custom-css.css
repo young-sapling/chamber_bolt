@@ -1,0 +1,280 @@
+/* Custom CSS for One in the Chamber HighLevel Funnel */
+
+/* Base Styles */
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Gradient */
+.bg-gradient-main {
+    background: linear-gradient(135deg, #1f2937 0%, #7c3aed 50%, #1f2937 100%);
+    min-height: 100vh;
+}
+
+/* Glass Effect Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+/* Button Styles */
+.cta-button {
+    background: linear-gradient(to right, #9333ea, #ec4899) !important;
+    transition: all 0.3s ease !important;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #7c3aed, #db2777) !important;
+    transform: scale(1.05) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+    0%, 5%, 10%, 15%, 20%, 25% {
+        transform: rotate(0deg);
+    }
+    2.5%, 7.5%, 12.5%, 17.5%, 22.5% {
+        transform: rotate(-2deg);
+    }
+    5%, 10%, 15%, 20% {
+        transform: rotate(2deg);
+    }
+    25%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wiggle-animation {
+    animation: wiggle 4s ease-in-out infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounceArrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+.bounce-arrow {
+    animation: bounceArrow 2s infinite;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Timeline Steps */
+.timeline-step {
+    transition: all 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-2px);
+}
+
+/* Order Summary */
+.order-summary {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+}
+
+/* Security Badge */
+.security-badge {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 1px solid #a7f3d0;
+}
+
+/* FAQ Accordion Styles */
+.faq-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.faq-button {
+    width: 100%;
+    padding: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.faq-button:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-answer {
+    padding: 0 24px 24px 24px;
+    color: white;
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-chevron {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+
+.faq-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-cols-md-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-cols-md-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-cols-lg-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-4xl-md {
+        font-size: 2.5rem;
+    }
+    
+    .text-6xl-lg {
+        font-size: 3rem;
+    }
+    
+    .px-8-sm {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Utility Classes */
+.text-gradient {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-glow {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 320px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Icon Styles */
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+}
+
+.icon-circle-purple {
+    background: #9333ea;
+}
+
+.icon-circle-pink {
+    background: #ec4899;
+}
+
+.icon-circle-blue {
+    background: #3b82f6;
+}
+
+.icon-circle-green {
+    background: #10b981;
+}
+
+/* Step Numbers */
+.step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto 16px auto;
+}
+
+.step-1 { background: #9333ea; }
+.step-2 { background: #ec4899; }
+.step-3 { background: #3b82f6; }
+.step-4 { background: #10b981; }
+.step-5 { background: #f59e0b; }
+.step-6 { background: #ef4444; }
+.step-7 { background: #8b5cf6; }
+.step-8 { background: #06b6d4; }
