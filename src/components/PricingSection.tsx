@@ -30,7 +30,7 @@ export default function PricingSection({ onPlanSelection }: PricingSectionProps)
               <p className="text-gray-600">Perfect for getting started with AI-powered ads</p>
             </div>
             
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 min-h-[200px]">
               <div className="flex items-center">
                 <Check className="w-5 h-5 text-green-500 mr-3" />
                 <span className="text-gray-700">Monthly ad management & optimization</span>
@@ -74,7 +74,7 @@ export default function PricingSection({ onPlanSelection }: PricingSectionProps)
               <p className="text-gray-600">Complete AI video funnel for maximum impact</p>
             </div>
             
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 min-h-[200px]">
               <div className="flex items-center">
                 <Check className="w-5 h-5 text-green-500 mr-3" />
                 <span className="text-gray-700">Everything in Essential plan</span>
