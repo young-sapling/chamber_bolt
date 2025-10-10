@@ -49,12 +49,14 @@ export default function PricingSection({ onPlanSelection }: PricingSectionProps)
               </div>
             </div>
             
-            <button
-              onClick={() => onPlanSelection('essential')}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Choose Essential Plan
-            </button>
+            <div className="mt-auto">
+              <button
+                onClick={() => onPlanSelection('essential')}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Choose Essential Plan
+              </button>
+            </div>
           </div>
           
           {/* Premium Plan */}
@@ -97,12 +99,14 @@ export default function PricingSection({ onPlanSelection }: PricingSectionProps)
               </div>
             </div>
             
-            <button
-              onClick={() => onPlanSelection('premium')}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Choose Premium Plan
-            </button>
+            <div className="mt-auto">
+              <button
+                onClick={() => onPlanSelection('premium')}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Choose Premium Plan
+              </button>
+            </div>
           </div>
         </div>
       </div>
