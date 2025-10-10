@@ -13,9 +13,9 @@ function HomePage() {
 
   const handlePlanSelection = (plan: 'essential' | 'premium') => {
     if (plan === 'premium') {
-      window.open('https://www.chambermedia.app/chamber-one-premium', '_blank');
+      window.open('https://chambermedia.app/chamber-one-premium', '_blank');
     } else {
-      window.open('https://www.chambermedia.app/chamber-one-essential', '_blank');
+      window.open('https://chambermedia.app/chamber-one-essential', '_blank');
     }
   };
 
