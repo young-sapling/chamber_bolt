@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import VideoShowcaseSection from './components/VideoShowcaseSection';
 import HowItWorksSection from './components/HowItWorksSection';
@@ -8,17 +8,15 @@ import PricingSection from './components/PricingSection';
 import FAQSection from './components/FAQSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
-import CheckoutPage from './components/CheckoutPage';
-import ThankYouPage from './components/ThankYouPage';
 
 function HomePage() {
-  const navigate = useNavigate();
-  const [selectedPlan, setSelectedPlan] = useState<'essential' | 'premium' | null>(null);
 
   const handlePlanSelection = (plan: 'essential' | 'premium') => {
-    setSelectedPlan(plan);
-    navigate(`/checkout/${plan}`);
-    window.scrollTo(0, 0);
+    if (plan === 'premium') {
+      window.open('https://www.chambermedia.app/chamber-one-premium', '_blank');
+    } else {
+      window.open('https://www.chambermedia.app/chamber-one-essential', '_blank');
+    }
   };
 
   return (
@@ -43,33 +41,11 @@ function HomePage() {
   );
 }
 
-function CheckoutRoute() {
-  const { plan } = useParams<{ plan: string }>();
-  const navigate = useNavigate();
-  
-  const handleBack = () => {
-    navigate('/');
-  };
-
-  return (
-    <CheckoutPage 
-      selectedPlan={(plan || 'essential') as 'essential' | 'premium'} 
-      onBack={handleBack} 
-    />
-  );
-}
-
-function ThankYouRoute() {
-  return <ThankYouPage />;
-}
-
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/checkout/:plan" element={<CheckoutRoute />} />
-        <Route path="/thank-you" element={<ThankYouRoute />} />
       </Routes>
     </Router>
   );

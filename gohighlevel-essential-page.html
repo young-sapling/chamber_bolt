@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One in the Chamber - Complete Your Order</title>
+    <title>One in the Chamber - Essential Plan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
@@ -64,14 +64,14 @@
         <!-- Header -->
         <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
             <h1 class="text-2xl font-bold">Complete Your Order</h1>
-            <p class="text-white/90" id="plan-subtitle">One in the Chamber - Premium Plan</p>
+            <p class="text-white/90">One in the Chamber - Essential Plan</p>
         </div>
 
         <div class="bg-white p-8">
             <!-- Your GoHighLevel Form -->
             <div id="ghl-form-container">
                 <iframe 
-                    src="https://link.chamber.media/widget/form/gtnJnHUM2U3D2iMgsw5x"
+                    src="https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7"
                     width="100%" 
                     height="2000"
                     frameborder="0"
@@ -132,12 +132,12 @@
                         <div class="border border-gray-200 rounded-lg p-6 order-summary">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h4 class="font-semibold text-gray-800" id="plan-name">Premium Plan</h4>
+                                    <h4 class="font-semibold text-gray-800">Essential Plan</h4>
                                     <p class="text-gray-600 text-sm">Monthly subscription</p>
                                 </div>
                                 <div class="text-right">
-                                    <div class="text-2xl font-bold text-gray-800" id="plan-price">
-                                        $3,500
+                                    <div class="text-2xl font-bold text-gray-800">
+                                        $2,500
                                     </div>
                                     <div class="text-gray-600 text-sm">/month</div>
                                 </div>
@@ -145,8 +145,23 @@
                             
                             <div class="border-t pt-4">
                                 <h5 class="font-semibold text-gray-800 mb-3">Included:</h5>
-                                <ul class="space-y-2" id="plan-features">
-                                    <!-- Features will be populated by JavaScript -->
+                                <ul class="space-y-2">
+                                    <li class="flex items-start text-sm text-gray-600">
+                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                        Monthly ad management & optimization
+                                    </li>
+                                    <li class="flex items-start text-sm text-gray-600">
+                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                        5 custom AI-generated static image ads
+                                    </li>
+                                    <li class="flex items-start text-sm text-gray-600">
+                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                        Daily performance reporting & insights
+                                    </li>
+                                    <li class="flex items-start text-sm text-gray-600">
+                                        <span class="text-green-500 mr-2 mt-0.5">✓</span>
+                                        Email & Slack support within 48-hours
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -168,65 +183,12 @@
                     </div>
                 </div>
 
-                <!-- Right Column - Steps Content -->
+                <!-- Right Column - Additional content can go here -->
                 <div>
                     <!-- Additional content can go here -->
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // Plan data
-        const planDetails = {
-            essential: {
-                name: 'Essential Plan',
-                price: 2500,
-                features: [
-                    'Monthly ad management & optimization',
-                    '5 custom AI-generated static image ads',
-                    'Daily performance reporting & insights',
-                    'Email & Slack support within 48-hours'
-                ]
-            },
-            premium: {
-                name: 'Premium Plan',
-                price: 3500,
-                features: [
-                    'Everything in Essential plan',
-                    'Quarterly AI video funnel (3 custom videos)',
-                    '1 top-of-funnel prospecting video',
-                    '2 performance retargeting videos',
-                    'Priority email & Slack support within 1 business day'
-                ]
-            }
-        };
-
-        // Get plan from URL parameter
-        function getSelectedPlanFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const plan = urlParams.get('plan');
-            return (plan === 'essential' || plan === 'premium') ? plan : 'premium';
-        }
-
-        // Update plan display
-        function updatePlan() {
-            const selectedPlan = getSelectedPlanFromURL();
-            const planData = planDetails[selectedPlan];
-            
-            // Update plan name and price
-            document.getElementById('plan-name').textContent = planData.name;
-            document.getElementById('plan-price').textContent = `$${planData.price.toLocaleString()}`;
-            document.getElementById('plan-subtitle').textContent = `One in the Chamber - ${planData.name}`;
-            
-            // Update features list
-            const featuresContainer = document.getElementById('plan-features');
-            featuresContainer.innerHTML = planData.features.map(feature => `
-                <li class="flex items-start text-sm text-gray-600">
-                    <span class="text-green-500 mr-2 mt-0.5">✓</span>
-                    ${feature}
-                </li>
-        }
-    </script>
 </body>
 </html>
