@@ -135,15 +135,6 @@
             border-color: #9ca3af;
         }
 
-        /* Hide GoHighLevel form initially */
-        #ghl-form-container {
-            display: none;
-        }
-
-        #ghl-form-container.active {
-            display: block;
-        }
-
         /* Step 1 Form Styling */
         .step1-form {
             max-width: 500px;
@@ -287,7 +278,7 @@
                 </div>
             </div>
 
-            <!-- Step 2: Your Existing GoHighLevel Form -->
+            <!-- Step 2: Payment with GoHighLevel Form -->
             <div id="step-2" class="checkout-step">
                 <div class="step-content">
                     <div class="flex items-center justify-between mb-6">
@@ -309,6 +300,18 @@
                             <p><strong>Phone:</strong> <span id="confirm-phone"></span></p>
                             <p><strong>Website:</strong> <span id="confirm-website"></span></p>
                         </div>
+                    </div>
+
+                    <!-- Your Existing GoHighLevel Form -->
+                    <div id="ghl-form-container">
+                        <iframe 
+                            src="https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7"
+                            width="100%" 
+                            height="1800"
+                            frameborder="0"
+                            scrolling="no"
+                            id="ghl-form-iframe">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -358,7 +361,7 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-                <!-- Left Column - Plan Selection & Order Summary -->
+                <!-- Left Column - Order Summary -->
                 <div>
                     <div class="mb-8">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Order Summary</h3>
@@ -401,23 +404,8 @@
                     </div>
                 </div>
 
-                <!-- Right Column - GoHighLevel Form -->
-                <div id="ghl-form-section">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Complete Your Order</h3>
-                    
-                    <!-- GoHighLevel Form Container -->
-                    <div id="ghl-form-container" class="active">
-                        <iframe 
-                            src="https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7"
-                            width="100%" 
-                            height="1800"
-                            frameborder="0"
-                            scrolling="no"
-                            id="ghl-form-iframe"
-                            onload="resizeIframe(this)">
-                        </iframe>
-                    </div>
-
+                <!-- Right Column - Steps Content -->
+                <div id="steps-container">
                     <p class="text-sm text-gray-600 text-center flex items-center justify-center mt-4">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -485,4 +473,89 @@
         // 2-Step Checkout Management
         class TwoStepCheckout {
             constructor() {
-                this.current
+                this.currentStep = 1;
+                this.formData = {};
+                this.init();
+            }
+
+            init() {
+                this.showStep(1);
+                this.bindEvents();
+            }
+
+            bindEvents() {
+                // Step 1 form submission
+                document.getElementById('step1-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleStep1Submit();
+                });
+
+                // Back button
+                document.getElementById('back-btn').addEventListener('click', () => {
+                    this.goToStep(1);
+                });
+            }
+
+            showStep(stepNumber) {
+                // Hide all steps
+                document.querySelectorAll('.checkout-step').forEach(step => {
+                    step.classList.remove('active');
+                });
+
+                // Show current step
+                document.getElementById(`step-${stepNumber}`).classList.add('active');
+
+                // Update progress indicator
+                this.updateProgress(stepNumber);
+                this.currentStep = stepNumber;
+            }
+
+            updateProgress(currentStep) {
+                document.querySelectorAll('.progress-step').forEach((step, index) => {
+                    const stepNum = index + 1;
+                    step.classList.remove('active', 'completed');
+                    
+                    if (stepNum < currentStep) {
+                        step.classList.add('completed');
+                    } else if (stepNum === currentStep) {
+                        step.classList.add('active');
+                    }
+                });
+
+                document.querySelectorAll('.progress-connector').forEach((connector, index) => {
+                    connector.classList.toggle('completed', index + 1 < currentStep);
+                });
+            }
+
+            handleStep1Submit() {
+                // Collect form data
+                const formData = new FormData(document.getElementById('step1-form'));
+                this.formData = Object.fromEntries(formData);
+
+                // Move to step 2
+                this.goToStep(2);
+                this.prefillStep2();
+            }
+
+            prefillStep2() {
+                // Pre-fill step 2 with step 1 data
+                document.getElementById('confirm-name').textContent = 
+                    `${this.formData.firstName} ${this.formData.lastName}`;
+                document.getElementById('confirm-email').textContent = this.formData.email;
+                document.getElementById('confirm-phone').textContent = this.formData.phone;
+                document.getElementById('confirm-website').textContent = this.formData.website;
+            }
+
+            goToStep(stepNumber) {
+                this.showStep(stepNumber);
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePlan();
+            new TwoStepCheckout();
+        });
+    </script>
+</body>
+</html>
