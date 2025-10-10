@@ -9,168 +9,10 @@
         html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         
-        /* 2-Step Progress Indicator */
-        .checkout-progress {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding: 1rem 0;
-        }
-
-        .progress-step {
-            display: flex;
-            align-items: center;
-            color: #6b7280;
-            font-weight: 500;
-        }
-
-        .progress-step.active {
-            color: #9333ea;
-        }
-
-        .progress-step.completed {
-            color: #10b981;
-        }
-
-        .step-circle {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 0.5rem;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .progress-step.active .step-circle {
-            background: #9333ea;
-            color: white;
-        }
-
-        .progress-step.completed .step-circle {
-            background: #10b981;
-            color: white;
-        }
-
-        .progress-step:not(.active):not(.completed) .step-circle {
-            background: #e5e7eb;
-            color: #6b7280;
-        }
-
-        .progress-connector {
-            width: 60px;
-            height: 2px;
-            background: #e5e7eb;
-            margin: 0 1rem;
-        }
-
-        .progress-connector.completed {
-            background: #10b981;
-        }
-
-        /* Step Content */
-        .checkout-step {
-            display: none;
-        }
-
-        .checkout-step.active {
-            display: block;
-        }
-
-        .step-content {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .step-description {
-            color: #6b7280;
-            margin-bottom: 2rem;
-        }
-
-        /* Button Styles */
-        .btn-continue {
-            background: linear-gradient(to right, #9333ea, #ec4899);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .btn-continue:hover {
-            background: linear-gradient(to right, #7c3aed, #db2777);
-            transform: scale(1.02);
-        }
-
-        .btn-back {
-            background: transparent;
-            color: #6b7280;
-            padding: 12px 24px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-right: 1rem;
-        }
-
-        .btn-back:hover {
-            background: #f9fafb;
-            border-color: #9ca3af;
-        }
-
-        /* Step 1 Form Styling */
-        .step1-form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #9333ea;
-            box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
-        }
-
         /* GoHighLevel Form Styling */
         #ghl-form-container iframe {
             width: 100% !important;
-            min-height: 1800px !important;
+            min-height: 2000px !important;
             border: none !important;
             border-radius: 8px !important;
             background: white !important;
@@ -180,7 +22,7 @@
         /* Mobile responsive form */
         @media (max-width: 768px) {
             #ghl-form-container iframe {
-                min-height: 2000px !important;
+                min-height: 2200px !important;
             }
         }
         
@@ -226,98 +68,20 @@
         </div>
 
         <div class="bg-white p-8">
-            <!-- Progress Indicator -->
-            <div class="checkout-progress">
-                <div class="progress-step active" id="progress-step-1">
-                    <div class="step-circle">1</div>
-                    <span>Contact Info</span>
-                </div>
-                <div class="progress-connector" id="progress-connector-1"></div>
-                <div class="progress-step" id="progress-step-2">
-                    <div class="step-circle">2</div>
-                    <span>Payment</span>
-                </div>
-            </div>
-
-            <!-- Step 1: Contact Information -->
-            <div id="step-1" class="checkout-step active">
-                <div class="step-content">
-                    <h2 class="step-title">Let's Get Started</h2>
-                    <p class="step-description">First, we need some basic information about you and your business.</p>
-                    
-                    <form id="step1-form" class="step1-form">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="website">Business Website *</label>
-                            <input type="url" id="website" name="website" placeholder="https://yourbusiness.com" required>
-                        </div>
-                        
-                        <button type="submit" class="btn-continue">
-                            Continue to Payment →
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Step 2: Payment with GoHighLevel Form -->
-            <div id="step-2" class="checkout-step">
-                <div class="step-content">
-                    <div class="flex items-center justify-between mb-6">
-                        <div>
-                            <h2 class="step-title">Complete Your Order</h2>
-                            <p class="step-description">You're almost done! Complete your payment details below.</p>
-                        </div>
-                        <button type="button" id="back-btn" class="btn-back">
-                            ← Back
-                        </button>
-                    </div>
-                    
-                    <!-- Contact Info Summary -->
-                    <div class="bg-gray-50 rounded-lg p-4 mb-6">
-                        <h3 class="font-semibold text-gray-800 mb-2">Contact Information:</h3>
-                        <div class="text-sm text-gray-600">
-                            <p><strong>Name:</strong> <span id="confirm-name"></span></p>
-                            <p><strong>Email:</strong> <span id="confirm-email"></span></p>
-                            <p><strong>Phone:</strong> <span id="confirm-phone"></span></p>
-                            <p><strong>Website:</strong> <span id="confirm-website"></span></p>
-                        </div>
-                    </div>
-
-                    <!-- Your Existing GoHighLevel Form -->
-                    <div id="ghl-form-container">
-                        <iframe 
-                            src="https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7"
-                            width="100%" 
-                            height="1800"
-                            frameborder="0"
-                            scrolling="no"
-                            id="ghl-form-iframe">
-                        </iframe>
-                    </div>
-                </div>
+            <!-- Your GoHighLevel Form -->
+            <div id="ghl-form-container">
+                <iframe 
+                    src="https://link.chamber.media/widget/form/zLKviLckhn1kFYQA7HV7"
+                    width="100%" 
+                    height="2000"
+                    frameborder="0"
+                    scrolling="no"
+                    id="ghl-form-iframe">
+                </iframe>
             </div>
 
             <!-- What Happens Next Timeline -->
-            <div class="mb-12" id="timeline-section">
+            <div class="mb-12">
                 <div class="flex items-center mb-6">
                     <svg class="w-6 h-6 text-gray-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -405,13 +169,8 @@
                 </div>
 
                 <!-- Right Column - Steps Content -->
-                <div id="steps-container">
-                    <p class="text-sm text-gray-600 text-center flex items-center justify-center mt-4">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        Your subscription starts immediately after payment
-                    </p>
+                <div>
+                    <!-- Additional content can go here -->
                 </div>
             </div>
         </div>
@@ -467,95 +226,7 @@
                     <span class="text-green-500 mr-2 mt-0.5">✓</span>
                     ${feature}
                 </li>
-            `).join('');
         }
-        
-        // 2-Step Checkout Management
-        class TwoStepCheckout {
-            constructor() {
-                this.currentStep = 1;
-                this.formData = {};
-                this.init();
-            }
-
-            init() {
-                this.showStep(1);
-                this.bindEvents();
-            }
-
-            bindEvents() {
-                // Step 1 form submission
-                document.getElementById('step1-form').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    this.handleStep1Submit();
-                });
-
-                // Back button
-                document.getElementById('back-btn').addEventListener('click', () => {
-                    this.goToStep(1);
-                });
-            }
-
-            showStep(stepNumber) {
-                // Hide all steps
-                document.querySelectorAll('.checkout-step').forEach(step => {
-                    step.classList.remove('active');
-                });
-
-                // Show current step
-                document.getElementById(`step-${stepNumber}`).classList.add('active');
-
-                // Update progress indicator
-                this.updateProgress(stepNumber);
-                this.currentStep = stepNumber;
-            }
-
-            updateProgress(currentStep) {
-                document.querySelectorAll('.progress-step').forEach((step, index) => {
-                    const stepNum = index + 1;
-                    step.classList.remove('active', 'completed');
-                    
-                    if (stepNum < currentStep) {
-                        step.classList.add('completed');
-                    } else if (stepNum === currentStep) {
-                        step.classList.add('active');
-                    }
-                });
-
-                document.querySelectorAll('.progress-connector').forEach((connector, index) => {
-                    connector.classList.toggle('completed', index + 1 < currentStep);
-                });
-            }
-
-            handleStep1Submit() {
-                // Collect form data
-                const formData = new FormData(document.getElementById('step1-form'));
-                this.formData = Object.fromEntries(formData);
-
-                // Move to step 2
-                this.goToStep(2);
-                this.prefillStep2();
-            }
-
-            prefillStep2() {
-                // Pre-fill step 2 with step 1 data
-                document.getElementById('confirm-name').textContent = 
-                    `${this.formData.firstName} ${this.formData.lastName}`;
-                document.getElementById('confirm-email').textContent = this.formData.email;
-                document.getElementById('confirm-phone').textContent = this.formData.phone;
-                document.getElementById('confirm-website').textContent = this.formData.website;
-            }
-
-            goToStep(stepNumber) {
-                this.showStep(stepNumber);
-            }
-        }
-
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            updatePlan();
-            new TwoStepCheckout();
-        });
     </script>
 </body>
 </html>

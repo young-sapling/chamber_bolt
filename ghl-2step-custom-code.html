@@ -1,0 +1,368 @@
+<!-- ADD THIS TO YOUR GOHIGHLEVEL FORM'S CUSTOM CODE SECTION -->
+
+<!-- CSS - Add to Form Settings > Custom CSS -->
+<style>
+/* 2-Step Form Progress Indicator */
+.ghl-progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.ghl-progress-step {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.ghl-progress-step.active {
+    color: #9333ea;
+}
+
+.ghl-progress-step.completed {
+    color: #10b981;
+}
+
+.ghl-step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #e5e7eb;
+}
+
+.ghl-progress-step.active .ghl-step-circle {
+    background: #9333ea;
+    color: white;
+    border-color: #9333ea;
+}
+
+.ghl-progress-step.completed .ghl-step-circle {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.ghl-progress-connector {
+    width: 60px;
+    height: 2px;
+    background: #e5e7eb;
+    margin: 0 15px;
+}
+
+.ghl-progress-connector.completed {
+    background: #10b981;
+}
+
+/* Step Content Styling */
+.ghl-form-step {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.ghl-form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ghl-step-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.ghl-step-description {
+    color: #6b7280;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.ghl-continue-btn {
+    background: linear-gradient(to right, #9333ea, #ec4899) !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+    font-size: 16px !important;
+}
+
+.ghl-continue-btn:hover {
+    background: linear-gradient(to right, #7c3aed, #db2777) !important;
+    transform: scale(1.02) !important;
+}
+
+.ghl-back-btn {
+    background: transparent !important;
+    color: #6b7280 !important;
+    padding: 12px 24px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-right: 15px !important;
+    font-size: 16px !important;
+}
+
+.ghl-back-btn:hover {
+    background: #f9fafb !important;
+    border-color: #9ca3af !important;
+}
+
+/* Contact Summary Styling */
+.ghl-contact-summary {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.ghl-contact-summary h3 {
+    font-weight: 600;
+    color: #065f46;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.ghl-contact-summary p {
+    color: #047857;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Hide default form elements initially */
+.hl_form-field:not(.step1-field) {
+    display: none;
+}
+
+/* Step 1 fields styling */
+.step1-field {
+    margin-bottom: 20px;
+}
+
+.step1-field label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.step1-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.step1-field input:focus {
+    outline: none;
+    border-color: #9333ea;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+</style>
+
+<!-- HTML - Add to Form Settings > Custom HTML (Top) -->
+<div class="ghl-progress-bar">
+    <div class="ghl-progress-step active" id="ghl-progress-step-1">
+        <div class="ghl-step-circle">1</div>
+        <span>Contact Info</span>
+    </div>
+    <div class="ghl-progress-connector" id="ghl-progress-connector-1"></div>
+    <div class="ghl-progress-step" id="ghl-progress-step-2">
+        <div class="ghl-step-circle">2</div>
+        <span>Payment Details</span>
+    </div>
+</div>
+
+<div id="ghl-step-1" class="ghl-form-step active">
+    <h2 class="ghl-step-title">Let's Get Started</h2>
+    <p class="ghl-step-description">First, we need some basic information about you and your business.</p>
+</div>
+
+<div id="ghl-step-2" class="ghl-form-step">
+    <h2 class="ghl-step-title">Complete Your Order</h2>
+    <p class="ghl-step-description">You're almost done! Add your payment details below.</p>
+    
+    <div class="ghl-contact-summary" id="ghl-contact-summary" style="display: none;">
+        <h3>Contact Information:</h3>
+        <p><strong>Name:</strong> <span id="ghl-confirm-name"></span></p>
+        <p><strong>Email:</strong> <span id="ghl-confirm-email"></span></p>
+        <p><strong>Phone:</strong> <span id="ghl-confirm-phone"></span></p>
+        <p><strong>Website:</strong> <span id="ghl-confirm-website"></span></p>
+    </div>
+    
+    <button type="button" class="ghl-back-btn" id="ghl-back-btn">← Back to Edit Info</button>
+</div>
+
+<!-- JavaScript - Add to Form Settings > Custom JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 2-Step Form Management
+    let currentStep = 1;
+    let step1Data = {};
+    
+    // Get form fields
+    const firstNameField = document.querySelector('input[name*="first_name"], input[name*="firstName"]');
+    const lastNameField = document.querySelector('input[name*="last_name"], input[name*="lastName"]');
+    const emailField = document.querySelector('input[name*="email"]');
+    const phoneField = document.querySelector('input[name*="phone"]');
+    const websiteField = document.querySelector('input[name*="website"], input[name*="business_url"]');
+    
+    // Add step1-field class to contact info fields
+    if (firstNameField) firstNameField.closest('.hl_form-field').classList.add('step1-field');
+    if (lastNameField) lastNameField.closest('.hl_form-field').classList.add('step1-field');
+    if (emailField) emailField.closest('.hl_form-field').classList.add('step1-field');
+    if (phoneField) phoneField.closest('.hl_form-field').classList.add('step1-field');
+    if (websiteField) websiteField.closest('.hl_form-field').classList.add('step1-field');
+    
+    // Create continue button for step 1
+    const continueBtn = document.createElement('button');
+    continueBtn.type = 'button';
+    continueBtn.className = 'ghl-continue-btn';
+    continueBtn.innerHTML = 'Continue to Payment →';
+    continueBtn.id = 'ghl-continue-btn';
+    
+    // Add continue button after step 1 fields
+    const step1Container = document.getElementById('ghl-step-1');
+    if (step1Container) {
+        step1Container.appendChild(continueBtn);
+    }
+    
+    // Hide original submit button initially
+    const originalSubmitBtn = document.querySelector('button[type="submit"], input[type="submit"]');
+    if (originalSubmitBtn) {
+        originalSubmitBtn.style.display = 'none';
+    }
+    
+    // Continue button click handler
+    continueBtn.addEventListener('click', function() {
+        // Validate step 1 fields
+        let isValid = true;
+        const step1Fields = document.querySelectorAll('.step1-field input[required]');
+        
+        step1Fields.forEach(field => {
+            if (!field.value.trim()) {
+                field.style.borderColor = '#ef4444';
+                isValid = false;
+            } else {
+                field.style.borderColor = '#d1d5db';
+            }
+        });
+        
+        if (!isValid) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Store step 1 data
+        step1Data = {
+            firstName: firstNameField ? firstNameField.value : '',
+            lastName: lastNameField ? lastNameField.value : '',
+            email: emailField ? emailField.value : '',
+            phone: phoneField ? phoneField.value : '',
+            website: websiteField ? websiteField.value : ''
+        };
+        
+        // Move to step 2
+        goToStep(2);
+    });
+    
+    // Back button click handler
+    document.getElementById('ghl-back-btn').addEventListener('click', function() {
+        goToStep(1);
+    });
+    
+    function goToStep(stepNumber) {
+        currentStep = stepNumber;
+        
+        // Update progress indicator
+        updateProgress(stepNumber);
+        
+        // Show/hide step content
+        document.getElementById('ghl-step-1').classList.toggle('active', stepNumber === 1);
+        document.getElementById('ghl-step-2').classList.toggle('active', stepNumber === 2);
+        
+        // Show/hide form fields
+        document.querySelectorAll('.step1-field').forEach(field => {
+            field.style.display = stepNumber === 1 ? 'block' : 'none';
+        });
+        
+        document.querySelectorAll('.hl_form-field:not(.step1-field)').forEach(field => {
+            field.style.display = stepNumber === 2 ? 'block' : 'none';
+        });
+        
+        // Show/hide buttons
+        continueBtn.style.display = stepNumber === 1 ? 'block' : 'none';
+        if (originalSubmitBtn) {
+            originalSubmitBtn.style.display = stepNumber === 2 ? 'block' : 'none';
+        }
+        
+        // Show contact summary in step 2
+        if (stepNumber === 2) {
+            showContactSummary();
+        }
+    }
+    
+    function updateProgress(currentStep) {
+        // Update step indicators
+        document.querySelectorAll('.ghl-progress-step').forEach((step, index) => {
+            const stepNum = index + 1;
+            step.classList.remove('active', 'completed');
+            
+            if (stepNum < currentStep) {
+                step.classList.add('completed');
+            } else if (stepNum === currentStep) {
+                step.classList.add('active');
+            }
+        });
+        
+        // Update connectors
+        document.querySelectorAll('.ghl-progress-connector').forEach((connector, index) => {
+            connector.classList.toggle('completed', index + 1 < currentStep);
+        });
+    }
+    
+    function showContactSummary() {
+        const summary = document.getElementById('ghl-contact-summary');
+        if (summary && step1Data.firstName) {
+            document.getElementById('ghl-confirm-name').textContent = 
+                `${step1Data.firstName} ${step1Data.lastName}`;
+            document.getElementById('ghl-confirm-email').textContent = step1Data.email;
+            document.getElementById('ghl-confirm-phone').textContent = step1Data.phone;
+            document.getElementById('ghl-confirm-website').textContent = step1Data.website;
+            summary.style.display = 'block';
+        }
+    }
+    
+    // Initialize
+    goToStep(1);
+});
+</script>
